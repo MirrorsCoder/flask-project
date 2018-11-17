@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Show Pages{% endblock %}
+
+{% block show %}
+    #
+{% endblock %}
+
+
+{% block page_content %}
+    </br></br></br></br>
+    <form id="form1" method="post" action="/api/upload" enctype="multipart/form-data">
+        <div>
+            <h4>Note:Please upload your files<b>(Remember that you can only upload files in 'xls', 'xlsx', 'csv' format)</b></h4>
+            </br>
+{#            <body style="background-image: url(http://p9kmyr7q8.bkt.clouddn.com/585cc74d4ba83.jpg);">#}
+            <input id="File1" type="file" name="myfile"/>  <!--后台代码中获取文件是通过form的name来标识的--></br>
+            <input type="submit">Submit</input>
+        </div>
+    </form>
+    </br></br></br></br>
+{% endblock %}

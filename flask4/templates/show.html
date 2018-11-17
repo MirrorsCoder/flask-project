@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Show Pages{% endblock %}
+
+
+
+
+
+
+
+{% block page_content %}
+    <h2>Show Graph</h2>
+    <table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Gender</th>
+        <th>University</th>
+        <th>Year</th>
+        <th>JID</th>
+        <th>Count</th>
+    </tr>
+        {% for i in u %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+                <td>{{ i[3] }}</td>
+                <td>{{ i[4] }}</td>
+                <td>{{ loop.index }}</td>
+            </tr>
+    {% endfor %}
+
+    </table>
+
+{% endblock %}
